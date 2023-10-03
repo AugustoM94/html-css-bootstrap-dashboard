@@ -24,13 +24,42 @@ width: 100%;
 height: calc(100% - 70px);
 display: flex;
 }
-#sidebar {
-width: 150px;
-height: 100%;   
+#side-bar {
+width: 100px;
+height: 100vh;   
 background-image: url(../img/sidebar-bg.png);
 background-color: var(--bg-sidebar);
 }
 #main-content {
-width: calc(100% - 150px);
+width: calc(100% - 100px);
 overflow-y: auto;
+}
+/* Sidebar */
+nav  li {
+   list-style: none;
+}
+
+.side-bar-top {
+    height: calc(100% - 150px);
+    overflow: hidden;
+    min-height: 500px;
+}
+.side-bar-bottom {
+    max-height: 100px;
+    position: relative;
+    left: 0;
+    bottom: -15px;    
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    display: none;
+}
+/* Header */
+.container-img img{
+    max-width: 70px;
+}
+con
+.container-img img:nth-child(2) {
+  display: none;
 }
