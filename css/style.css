@@ -6,6 +6,11 @@
 :root {
    --bg-sidebar: #0F263D;
    --bg-wrapper: #F8f9fa;
+   --bg-search-bar: #e5e5e5;
+}
+/* utility */
+.bg-search-bar {
+    background-color: var(--bg-search-bar);
 }
 body {
 font-family: 'Roboto', sans-serif;
@@ -18,6 +23,7 @@ background-color: var(--bg-wrapper);
 header {
 width: 100%;
 height: 70px;
+
 }
 main {
 width: 100%;
@@ -56,10 +62,13 @@ nav a {
     display: none;
 }
 /* Header */
+header ul li {
+    list-style: none;
+}
 .container-img img{
     max-width: 70px;
+    background-color: var(--bg-wrappers);
 }
-con
-.container-img img:nth-child(2) {
-  display: none;
+.section-item ul li{
+    display: none;
 }

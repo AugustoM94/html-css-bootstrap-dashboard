@@ -25,7 +25,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="container-fluid">
+        <header class="container-fluid bg-white">
              <div class="row">
                 <div class="col-2">
                     <div class="container-img">
@@ -33,11 +33,28 @@
                    <img src="img/logo.svg" alt="logo">
                     </div>
                 </div> 
-                <div class="col-8">
-
+                <div class="col-9">
+                    <div class="form-outline p-3">
+                        <input type="search" id="form1" class="form-control " placeholder="Prova a cercare:Lezioni di Laravel" aria-label="Search" />
+                      </div>
                 </div>
-                <div class="col-2">
-
+                <div class="col-1 py-3 section-item">
+                    <ul class="d-flex justify-content-between m-0 px-0">
+                                 <li><i class="fa-solid fa-list-ul"></i></li>
+                                 <li><i class="fa-solid fa-circle-question"></i></li>
+                                  <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        <div class="dropdown ">
+                                <button class="bg-transparent border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-bell fs-1" style="color: #d0b739;"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                    <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
              </div>
         </header>
