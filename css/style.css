@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+   --bg-sidebar: #0F263D;
+   --bg-wrapper: #F8f9fa;
+}
+body {
+font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+width: 100%;
+height: 100vh;
+background-color: var(--bg-wrapper);
+}
+header {
+width: 100%;
+height: 70px;
+}
+main {
+width: 100%;
+height: calc(100% - 70px);
+display: flex;
+}
+#sidebar {
+width: 150px;
+height: 100%;   
+background-image: url(../img/sidebar-bg.png);
+background-color: var(--bg-sidebar);
+}
+#main-content {
+width: calc(100% - 150px);
+overflow-y: auto;
+}
