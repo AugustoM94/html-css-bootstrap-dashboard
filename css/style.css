@@ -7,10 +7,38 @@
    --bg-sidebar: #0F263D;
    --bg-wrapper: #F8f9fa;
    --bg-search-bar: #e5e5e5;
+   --bg-fa-code: #f26551;
+   --bg-done:  #198754;
+   --bg-process: #ffc107;
+   --bg-failed: #e3192d;
+   --bg-item: #6C757d;
+   
 }
 /* utility */
 .bg-search-bar {
     background-color: var(--bg-search-bar);
+}
+.bg-fa-code {
+    background-color: var(--bg-fa-code);
+}
+.bg-done {
+    background-color: var(--bg-done);
+}
+.bg-process {
+    background-color: var(--bg-process);
+}
+.bg-failed {
+    background-color: var(--bg-failed);
+}
+.fa-pen-fa-color {
+    padding: 4px;
+    margin: 0 1px;
+    border: 1px solid var(--bg-item);
+    border-radius: 2px;
+    color: var(--bg-item);
+}
+.border {
+    border-radius: 5px;
 }
 body {
 font-family: 'Roboto', sans-serif;
