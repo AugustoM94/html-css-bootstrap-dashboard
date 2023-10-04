@@ -13,6 +13,7 @@
    --bg-failed: #e3192d;
    --bg-item: #6C757d;
    --bg-title: #f7f7f7;
+   --bg-badge: #165bba;
    
 }
 /* utility */
@@ -36,6 +37,9 @@
 }
 .bg-title {
     background-color: var(--bg-title);
+}
+.bg-badge {
+    background-color: var(--bg-badge);
 }
 .fa-pen-fa-color {
     padding: 4px;
