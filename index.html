@@ -29,8 +29,8 @@
              <div class="row">
                 <div class="col-2">
                     <div class="container-img">
-                   <img src="img/mobile-logo.png" alt="logo">
-                   <img src="img/logo.svg" alt="logo">
+                   <img src="img/mobile-logo.png" alt="logo" class="d-lg-none">
+                   <img src="img/logo.svg" alt="logo" class="mt-1 d-lg-inline-block d-none">
                     </div>
                 </div> 
                 <div class="col-9">
@@ -38,14 +38,14 @@
                         <input type="search" id="form1" class="form-control " placeholder="Prova a cercare:Lezioni di Laravel" aria-label="Search" />
                       </div>
                 </div>
-                <div class="col-1 py-3 section-item">
+                <div class="col-1 section-item py-2 mt-3">
                     <ul class="d-flex justify-content-between m-0 px-0">
-                                 <li><i class="fa-solid fa-list-ul"></i></li>
-                                 <li><i class="fa-solid fa-circle-question"></i></li>
-                                  <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                                 <li><i  class="fa-solid fa-list-ul d-none d-lg-inline-block"></i></li>
+                                 <li><i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i></li>
+                                  <li><i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i></li>
                         <div class="dropdown ">
                                 <button class="bg-transparent border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-bell fs-1" style="color: #d0b739;"></i>
+                                    <i class="fa-solid fa-bell" style="color: #d0b739;"></i>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Profilo</a></li>
@@ -58,41 +58,46 @@
              </div>
         </header>
         <main>
-            <aside id="side-bar">
-                <nav class=" justify-content-center">
-                   <div class="side-bar-top">
-                    <ul class="text-white d-flex flex-column p-0">
-                        <li class=" m-1 px-1">
-                            <i class="fa-solid fa-house m-2 fs-5"></i>
-                            <span><a href="#">Home</a></span>
+          <div id="side-bar">
+               <nav class="d-flex flex-column justify-content-between h-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent p-4">
+                          <a href="#" class="text-white d-flex justify-content-center align-items-center d-inline-block">
+                            <i class="fa-solid fa-house p-2"></i>
+                            <span class="d-lg-inline-block d-none">Home</span>
+                          </a>                        
                         </li>
-                        <li class=" m-1 px-1">
-                            <i class="fa-solid fa-chart-simple m-2 fs-3"></i>
-                            <span><a href="#">Stats</a></span>
+                        <li class="list-group-item bg-transparent p-4">
+                          <a href="#" class="text-white d-flex justify-content-center align-items-center d-block">
+                            <i class="fa-solid fa-chart-simple p-2"></i>
+                            <span class="d-lg-inline-block d-none">Stats</span>
+                          </a>                        
                         </li>
-                        <li class="m-1 px-1">
-                            <i class="fa-solid fa-signal m-2 fs-5"></i>
-                            <span ><a href="#">Signals</a></span>
-                        </li>
-                    </ul>
-                   </div>
-                   <div class="side-bar-bottom">
-                    <ul class=" text-white pt-0 px-2">
-                        <li class="m-1 px-1">
-                            <i class="fa-solid fa-gear m-2 fs-5"></i>
-                            <span><a class="text-white" href="#">Admin</a></span>
+                        <li class="list-group-item bg-transparent p-4">
+                          <a href="#" class="text-white d-flex justify-content-center align-items-center d-block">
+                            <i class="fa-solid fa-signal p-2"></i>
+                            <span class="d-lg-inline-block d-none">Signal</span>
+                          </a>                        
                         </li>
                     </ul>
-                   </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-transparent p-4">
+                        <a href="#" class="text-white d-flex justify-content-center align-items-centers d-block">
+                          <i class="fa-solid fa-gear p-2"></i>
+                          <span class="d-lg-inline-block d-none">Admin</span>
+                        </a>                        
+                      </li>
+                    </ul>
                 </nav>
-            </aside>
+              </div>
+
             <div id="main-content">
                 <section id="main-nav" class="bg-primary">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div class="row d-flex flex-row-reverse">
+                            <div class="col-12 col-md-4 col-lg-3">1</div>
+                            <div class="col-12 col-md-4 col-lg-3">2</div>
+                            <div class="col-12 col-md-4 col-lg-3">3</div>
                         </div>
                     </div>
 
@@ -100,80 +105,103 @@
                 <div class="container-fluid">
                     <div id="dashbord" class="row">
                         <div class="col-12 col-lg-8 mt-3">
-                            <div class="card">
-                                <h2 class="bg-title py-3 px-1">Prossime classi</h2>
-                                <table class="table table-hover mt-2">
+                            <div class="card-body">
+                                <h2 class="bg-title">Prossime classi</h2>
+                                <table class="table table-hover table-sm table-responsive-lg mt-2">
                                     <thead>
                                       <tr>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Data inizio</th>
-                                        <th scope="col">ROI</th>
-                                        <th scope="col">Stato</th>
-                                        <th scope="col">Azioni</th>
+                                        <th class="w-50" scope="col">Nome</th>
+                                        <th class="d-none d-lg-inline-block w-auto" scope="col">Data inizio</th>
+                                        <th class="d-none d-lg-inline-block w-50  text-center" scope="col">ROI</th>
+                                        <th class="text-center" scope="col">Stato</th>
+                                        <th class="text-center w-25-md" scope="col">Azioni</th>
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                        <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 75</th>
-                                        <td>15 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-done text-white border">done</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>
-                                      </tr>
-                                      <tr>
+                                      <tr class="align-middle">
+                                        <th scope="row"><i class=" fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 75</th>
+                                        <td class="d-none d-lg-inline-block text-center py-3">15 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-done text-white border">done</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                      
+                                    </tr>
+                                      <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 76</th>
-                                        <td>16 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-done text-white border">done</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                     
-                                     </tr>
-                                      <tr>
+                                        <td class="d-none d-lg-inline-block py-3">16 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-done text-white border">done</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                     
+                                    </tr>
+                                      <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 77</th>
-                                        <td>17 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-process text-white border">process</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                      
+                                        <td class="d-none d-lg-inline-block py-3">17 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-process text-white border">process</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                    
                                     </tr>
-                                      </tr>
-                                      <tr>
+                                      <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 78</th>
-                                        <td>18 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-done text-white border">done</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                      
+                                        <td class="d-none d-lg-inline-block py-3">18 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-done text-white border">done</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                    
                                     </tr>
-                                    <tr>
+                                    <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 79</th>
-                                        <td>19 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-failed text-white border">failed</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                      
+                                        <td class="d-none d-lg-inline-block py-3">19 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-failed text-white border">failed</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                    
                                     </tr>
-                                    <tr>
+                                    <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 80</th>
-                                        <td>20 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-done text-white border">done</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                      
-                                    </tr>
-                                    <tr>
+                                        <td class="d-none d-lg-inline-block py-3">20 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-done text-white border">done</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                   
+                                     </tr>
+                                    <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 81</th>
-                                        <td>21 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-failed text-white border">failed</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                      
+                                        <td class="d-none d-lg-inline-block py-3">21 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-failed text-white border">failed</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                    
                                     </tr>
-                                    <tr>
+                                    <tr class="align-middle">
                                         <th scope="row"><i class="fa-solid fa-code bg-fa-code text-white rounded-circle my_icon text-center align-middle py-1 fs-5 me-2"></i> Classe 82</th>
-                                        <td>22 Feb 2021</td>
-                                        <td>20%</td>
-                                        <td><span class="bg-done text-white border">done</span></td>
-                                        <td><span><i class="fa-solid fa-pen fa-pen-fa-color"></i></span><span><i class="fa-pen-fa-color  fa-solid fa-trash"></i></span></td>                                      
-                                    </tr>
+                                        <td class="d-none d-lg-inline-block py-3">22 Feb 2021</td>
+                                        <td class="d-none d-lg-inline-block py-3 w-50 text-center">20%</td>
+                                        <td class="text-center"><span class="bg-done text-white border">done</span></td>
+                                        <td class="text-center d-flex justify-content-center align-items-center">
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-pencil"></i></button>
+                                          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-trash"></i></button>
+                                      </td>                                 
+                                       </tr>
                                 </tbody>
                              </table>
                         </div>
-                        <div class="accordion mt-3" id="accordionExample">
+                        <div class="accordion mt-3 mb-3" id="accordionExample">
                           <div class="accordion-item">
                             <h2 class="bg-title py-3 px-1">F.A.Q.</h2>
                             <h2 class="accordion-header">
@@ -214,15 +242,15 @@
                         </div>
                         </div>
                         <div class="col-12 col-lg-4">
-                            <div class="card mt-3">
-                              <h2 class="bg-title py-3 px-1">Todo</h2>
+                            <div class="card mb-4">
+                              <h2 class="bg-title py-2 px-1">Todo</h2>
                               <ul class="list-group list-group-light">
-                                <li class="list-group-item"><input type="checkbox" name="" id=""> Kickoff nuove classi</li>
-                                <li class="list-group-item"><input type="checkbox" name="" id=""> Lezione su Bootstrap in classe #107</li>
-                                <li class="list-group-item"><input type="checkbox" name="" id=""> Controllare username github studenti</li>
+                                <li class="list-group-item"><input type="checkbox" name="" id=""> <strong>Kickoff nuove classi</strong> </li>
+                                <li class="list-group-item"><input type="checkbox" name="" id=""> <strong>Lezione su Bootstrap in classe #107</strong></li>
+                                <li class="list-group-item"><input type="checkbox" name="" id=""> <strong>Controllare username github studenti</strong></li>
                               </ul>
                             </div>
-                            <div class="card">
+                            <div class="card mb-3">
                               <div class="card-body">
                                   <div class="card w-100" style="width: 18rem;">
                                       <ul class="list-group list-group-flush">
